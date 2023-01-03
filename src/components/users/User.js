@@ -9,6 +9,8 @@ const User = ({ match }) => {
 
   const { user, loading, getUser, repos, getUserRepos } = githubContext;
 
+  console.log("match params: ", match.params.login);
+
   useEffect(() => {
     getUser(match.params.login);
     getUserRepos(match.params.login);
